@@ -15,7 +15,7 @@ a{
 	text-decoration:none;
 }
 
-body{
+body,html{
 	font-size: 14px;
 	margin:0;
 	padding: 0;
@@ -161,3 +161,81 @@ nav p{
 .section-about-text a:hover{
 	color: #333333;
 }
+
+.students-reviews{
+	background-image:url("E:/class/img/testmo_img.jpg");
+	
+    color:#C9C9C9;
+	width: 100%;
+	height: 476px;
+}
+
+.students-reviews-para{
+	display: block;
+	text-align:center;
+	font-size:250%;
+	padding-top:30px;
+	letter-spacing: 2px;
+
+
+}
+
+.students-reviews-para:after{
+	display: block;
+	content: ' ';
+	height:6px;
+	width: 220px;
+	background-color: #707070;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+}
+
+.student{
+	width:30%;
+	margin-left: 15px;
+	margin-right: 15px;
+	float: left;
+	margin-top: 30px;
+}
+
+.student img{
+	height: 54px;
+	width: 57px;
+}
+
+.student p{
+	font-size: 150%;
+	padding-top:25px;
+	line-height: 30px;
+}
+
+/*start*/
+.student1{
+	width:30%;
+	margin-left: 45px;
+	margin-right: 15px;
+	float: left;
+	margin-top: 30px;
+}
+
+.student1 img{
+	height: 54px;
+	width: 57px;
+}
+
+.student1 p{
+	font-size: 150%;
+	padding-top:25px;
+	line-height: 30px;
+}
+
+/*end*/
+.student-name p img{
+	width: 90px;
+	height: auto;
+	border-radius: 50%;
+	vertical-align: middle;
+	margin-right: 20px;
+}
+
