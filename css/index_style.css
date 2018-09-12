@@ -1,4 +1,4 @@
-/*
+ /*
 base color #f1f1f1
 secondary color #333333
 
@@ -163,8 +163,118 @@ nav p{
 	color: #333333;
 }
 
+/* viggi */
+
+
+.courselink{
+	width:100%;
+	height: 300px;
+}
+
+.container1 {
+	float: left ;
+	margin-top: 10px;
+	margin-left: 120px;
+    position: relative;
+    width: 20%;
+}
+
+.container{
+	float: left ;
+	margin-top: 10px;
+	position: relative;
+    width: 20%;	
+
+}
+.image {
+  opacity: 1;
+  display: block;
+  width: 30%;
+  border: 3px solid grey;
+  background-color: rgb(234, 239, 245);
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  height: 10px;
+  width: 20px;
+  position: absolute;
+  top: 50px;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container1:hover .image{
+	opacity:0.3;
+}
+.container:hover .middle {
+  opacity: 1;
+}
+
+.container1:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: transparent;
+  border: 1px solid black;
+  display: inline-block;
+    text-transform: uppercase;
+  color: white;
+  font-size: 14px;
+ 	text-align: center;
+ 	padding-top: 6px;
+  height: 30px;
+  width: 100px;
+
+   
+}
+/* Till here from  .container is the css for hover effect and each symbol is currently having the same css containers */
+.read{
+	    transition: all 0.2s ease;
+
+}
+
+.line{
+	 border: 3px dotted #0099CC;
+        margin-left:10px;
+        margin-right:10px;
+}
+
+
+
+
+/* viggi */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .students-reviews{
-	background-image:url("E:/class/img/testmo_img.jpg");
+	background-image:url("testmo_img.jpg");
 	
     color:#C9C9C9;
 	width: 100%;
@@ -245,7 +355,7 @@ nav p{
 	width: 60%;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 45px;
+	margin-top: 30px;
 
 }
 
@@ -314,4 +424,33 @@ input[type=text],input[type=email],select,textarea{
 	background-color:#f1f1f1;
 	border:3px solid #333;
 
+}
+
+.email-sent{
+	display: block;
+	text-align:center;
+	font-size:120%;
+	padding-top:30px;
+	letter-spacing: 1.3px;
+	word-spacing: 2px;
+	color: #6EBBFC;
+	font-style: italic;
+}
+
+
+.footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background-color: rgb(192, 208, 234);
+    color: white;
+    text-align: center;
+}
+
+.navigator{
+	height: 40px;
+    width: auto;
+    background-color: rgb(192, 208, 234);
 }
