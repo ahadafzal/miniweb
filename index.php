@@ -21,6 +21,8 @@ if (sizeof($_POST)) {
 	<title>Demo classes</title>
 	<link rel="stylesheet" type="text/css" href="css/index_style.css">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0" >
+<!-- s -->
 <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,600,700,900" rel="stylesheet">
 	
 
@@ -64,7 +66,7 @@ if (sizeof($_POST)) {
 	
 	<div class="section-about">
 		<div class="section-about-img">
-			<img style="border-radius: 0% 50% 50% 0%;height: 350px;width: auto;border: 4px solid white;" src="img/founder.jpg">
+			<img  src="img/founder.jpg">
 		</div>
 		<div class="section-about-text">
 			<p >Ravindra is the most recognised technical trainer in the area of computer science in India. He holds a Masters degree in Computer Science from Indian Institute of Science (IISc)<br><br>
@@ -229,18 +231,49 @@ if (sizeof($_POST)) {
 	</section>
 
 
-	<div class="footer">
-  <nav class="navigator">
-			<a href="#" style="color:rgb(53, 121, 232) ; margin: 0 1em; font-size: 25px">About</a>
-			<a href="#" style="color:rgb(53, 121, 232) ; margin: 0 1em;font-size: 25px">FAQ</a>
-			<a href="#" style="color:rgb(53, 121, 232) ; margin: 0 1em; font-size: 25px">Register</a>
-			<a href="#" style="color:rgb(53, 121, 232) ; margin: 0 1em; font-size: 25px">Recomended books</a>
-	</nav>
-<p style="color:rgb(53, 121, 232) ; margin: 0 1em; font-size: 25px">12345@gmail.com</p>
-<p style="color:rgb(53, 121, 232) ; margin: 0 1em; font-size: 25px">Prerena Eduservices Private Limited © 2018</p>
-</div>
+	<footer>
+		<div class="foot-container">
+		<div class="row">
+			<div class="col-1 ">
+				<h3>About</h3>
+				<p>subjects since 2008. He is proud to say that almost half of the students now doing Masters at IISc and IITs in computer science have been trained by him in atleast one subject</p>
+				
+			</div>
+			<div class="col-1">
+				<h3>GET IN TOUCH</h3>
+				<p style="margin-bottom: 30px;">Some lines here. !!</p>
+					<div style="display: block;">
+						<img src="img/icons/mail.svg" class="icon">
+						<a href="#" style="text-decoration: none;font-size: 100%;color:#c9c9c9;padding-top: 20px;letter-spacing: 1.5px;word-spacing: 4px;" >info@classes-mail.com</a>
+					</div>
+					<br>
+					<div style="display: block;">
+						<img src="img/icons/phone.svg" class="icon">
+						<a href="#" style="text-decoration: none;font-size: 100%;color:#c9c9c9;padding-top: 20px;letter-spacing: 1.5px;word-spacing: 4px;" >+91-9768119962</a>
+					</div>
+					
+					
+			</div>
+			<div class="col-1">
+				<h3>SUBSCRIBE</h3>
+				<p style="margin-bottom: 30px;">For Latest Notification Subscribe Now</p>
+				<form action="#" method="post">	
+					<input type="email" name="Enter Your Email" placeholder="Enter Your Email" required="">
+				<input type="submit" value="Subscribe Now">
+			</form>
+			</div>
+		</div>
+		<div class="row">
+			<div style="width:100%;text-align: center;margin-top: 20px;color:#4f6457;">
+				<p>© 1998 - 2018 Perena Classes. All rights ® reserved <br> Design by Developed by Afzi & Viggi</p>
+			</div>
+		</div>
 
 
+
+
+	</div>
+	</footer>
 
 
 <!-- Modal for signup-->

@@ -80,9 +80,18 @@ nav{
 .cd-main-nav__item--signup{
 	padding: .6em 1em;
     border-radius: 50em;
-    background: #2f889a;
+    background: #6EBBFC;
+    transition: background 0.5s;
 
 }
+
+.cd-main-nav__item--signup:hover{
+	padding: .6em 1em;
+    border-radius: 50em;
+    background: #333333;
+
+}
+
 
 
 nav p{
@@ -99,6 +108,7 @@ nav p{
 	font-size: 135%;
 
 }
+
 
 
 .logo{
@@ -148,18 +158,25 @@ nav p{
 	float: left;
 }
 
+.section-about-img img{
+	border-radius: 0% 50% 50% 0%;
+	height: 350px;
+	width: auto;
+	border: 4px solid white;
+}
+
 .section-about-text{
 	height: 350px;
 	background-color:#F1F1F1;
 }
 
 .section-about-text p{
-	text-align: left;
+	text-align: justify;
 	margin-left: 470px;
 	margin-right: 50px;
 	padding-top: 20px;
-	font-size:120%;
-	line-height:200%;
+	font-size:125%;
+	line-height:180%;
 }
 
 .section-about-text a{
@@ -416,7 +433,7 @@ nav p{
 input[type=text],input[type=email],select,textarea{
 	width: 100%;
 	padding: 7px;
-	border-radius: 10%;
+	border-radius: 5px;
 	border:1px solid #ccc;
 	font-size: 140%;
 }
@@ -454,22 +471,64 @@ input[type=text],input[type=email],select,textarea{
 }
 
 
-.footer {
-    position: relative;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100px;
-    background-color: rgb(192, 208, 234);
-    color: white;
-    text-align: center;
+
+footer
+{
+background-color: #171616;
+
 }
 
-.navigator{
-	height: 40px;
-    width: auto;
-    background-color: rgb(192, 208, 234);
+.foot-container{
+	padding-top:60px;
+	padding-bottom:30px;
 }
+
+.col-1{
+	display: block;
+	float: left;
+	width: 25%;
+	margin-left: 5%;
+
+}
+
+.col-1 h3{
+	color:#ffffff;
+	margin-bottom:20px
+}
+
+.col-1:first-child{
+	margin-left:7.5%;
+}
+
+.col-1:last-child{
+	margin-right:7.5%;
+}
+
+.col-1 p{
+	color:#c9c9c9;
+	font-size: 120%;
+	    letter-spacing: 1.5px;
+    word-spacing: 4px;
+}
+
+footer form input[type=submit]{
+
+    color: #fff;
+    padding: 10px 21px;
+    font-size: 15px;
+    cursor: pointer;
+    background: #6EBBFC;
+    margin: 12px 0 0 0px;
+    outline: none;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+}
+
+
+
+
 
 
 /**
