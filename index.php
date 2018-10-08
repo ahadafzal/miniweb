@@ -1,14 +1,38 @@
 <?php
 //mail syntax - mail(to,subject,message,headers,parameters);
+require "PHPMailer/PHPMailerAutoload.php";
+
 $display=0;
 
 if (sizeof($_POST)) {
+	$mail = new PHPMailer();
+	$mail->isSMTP(); 
+	$mail->Host = 'smtp.gmail.com';
+	$mail->Username = 'democlasses03@gmail.com';
+	$mail->SMTPKeepAlive = true;   
+	
 
-	$headers="From: ".$_POST['email'];
+	$mail->Password = 'hackedbyafzal';                        
+	$mail->SMTPSecure = 'tls';
+	$mail->setFrom($_POST['email'], $_POST['name']);
+	$mail->SMTPAuth=true;               
+	$mail->Port = 587; 
+	$mail->addAddress('ahadbutafzal@gmail.com','admin');
+	$mail->Subject = 'Another Query';
+	$mail->Body    = $_POST['actualQueries'];
+	$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
-	if(mail('ahadbutafzal@gmail.com','another query',wordwrap($_POST['actualQueries'],$headers))){
+	
+
+	if(!$mail->send()){
+		echo "not avaible to send email";
+		echo $mail->ErrorInfo;
+
+	}
+	else{
 		$display=1;
 	}
+	
 }
 
 ?>
@@ -40,7 +64,7 @@ if (sizeof($_POST)) {
 		</div>
 		<div class='phone'>
 			<img src="img/icons/phone.svg" class="icon">
-			<a href="#"  >+91-9768119962</a>
+			<a href="#"  >+91-9996666555</a>
 		</div>
 		<!-- <div class='address'>
 			<img src="icons/address.svg" class="icon">
@@ -79,49 +103,62 @@ if (sizeof($_POST)) {
 		
 	</div>
 
+		<section class="course-section">
+			<p class="students-reviews-para">OUR COURSES</p>
 
-	<!-- viggi -->
-	<div class="courseslink">
-<div class="container1">
-	<img src="img/c2.png" alt="Avatar" class="image" style="width: 95%">
-  <div class="middle">
-    <div class="text"> <a class="read" href ="#">Read more</a></div>
-  </div>
-</div>
+	<div class="row">
+		<div class="col col-1-of-4" style="background-image: url(img/c1.jpg);">
+			<div class="course-data" onmouseover="makevisible(this)">
+				<p class="course-title">User Experience Design From A-Z</p>
+			
+			</div>
+			<div class="learn-more-button">
+			  <p>Learn More</p>
 
-<div class="container">
-		<img src="img/c3.png" alt="Avatar" class="image" style="width: 95%">
-  <div class="middle">
-    <div class="text"> <a class="read" href ="#">Read more</a></div>
-  </div>
-</div>
+			</div>
+			
+			
+		</div>
 
-<div class="container">
-		<img src="img/c4.png" alt="Avatar" class="image" style="width: 95%">
-  <div class="middle">
-    <div class="text"> <a class="read" href ="#">Read more</a></div>
-  </div>
-</div>
+		<div class="col col-1-of-4" style="background-image: url(img/c2.jpg);">
+			<div class="course-data">
+				
+					<p class="course-title">Using Sketch App for sfun an Profit</p>
+			</div>
+			<div class="learn-more-button">
+			  <p>Learn More</p>
 
-<div class="container">
-		<img src="img/c1.png" alt="Avatar" class="image" style="width: 95%">
-  <div class="middle">
-    <div class="text"> <a class="read" href ="#">Read more</a></div>
-  </div>
-</div>
-</div>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
+			</div>
+			
+		</div>
 
-	<!-- viggi -->
+		<div class="col col-1-of-4" style="background-image: url(img/c3.jpg);">
+			<div class="course-data">
+				
+					<p class="course-title">SEO:Search engine Optimization: covering each step</p>
+			</div>
+			<div class="learn-more-button">
+			  <p>Learn More</p>
 
+			</div>
+			
+		</div>
 
+		<div class="col col-1-of-4" style="background-image: url(img/c4.jpg);">
+			<div class="course-data">
+				
+					<p class="course-title">The Startup fun.</p>
+			</div>
+			<div class="learn-more-button">
+			  <p>Learn More</p>
+
+			</div>
+			
+		</div>
+		
+	</div>
+	
+</section>
 
 
 
@@ -289,22 +326,22 @@ if (sizeof($_POST)) {
 			</ul>
 
 			<div class="cd-signin-modal__block js-signin-modal-block" data-type="login"> <!-- log in form -->
-				<form class="cd-signin-modal__form">
+				<form class="cd-signin-modal__form" action="login.php" method="post">
 					<p class="cd-signin-modal__fieldset">
 						<label class="cd-signin-modal__label cd-signin-modal__label--email cd-signin-modal__label--image-replace" for="signin-email">E-mail</label>
-						<input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-email" type="email" placeholder="E-mail">
+						<input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border"  name="email" id="signin-email" type="email" placeholder="E-mail">
 						<span class="cd-signin-modal__error">Error message here!</span>
 					</p>
 
 					<p class="cd-signin-modal__fieldset">
 						<label class="cd-signin-modal__label cd-signin-modal__label--password cd-signin-modal__label--image-replace" for="signin-password">Password</label>
-						<input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-password" type="text"  placeholder="Password">
+						<input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signin-password" name="pass" type="text"  placeholder="Password">
 						<a href="#0" class="cd-signin-modal__hide-password js-hide-password">Hide</a>
 						<span class="cd-signin-modal__error">Error message here!</span>
 					</p>
 
 					<p class="cd-signin-modal__fieldset">
-						<input type="checkbox" id="remember-me" checked class="cd-signin-modal__input ">
+						<input type="checkbox" id="remember-me" checked class="cd-signin-modal__input " name="remember_me_check">
 						<label for="remember-me">Remember me</label>
 					</p>
 
@@ -317,22 +354,41 @@ if (sizeof($_POST)) {
 			</div> <!-- cd-signin-modal__block -->
 
 			<div class="cd-signin-modal__block js-signin-modal-block" data-type="signup"> <!-- sign up form -->
-				<form class="cd-signin-modal__form">
+				<form class="cd-signin-modal__form" action="register.php" method="post">
+					<p class="cd-signin-modal__fieldset">
+						<label class="cd-signin-modal__label cd-signin-modal__label--username cd-signin-modal__label--image-replace" for="signup-firstname">First  Name</label>
+						<input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signup-firstname" name="first_name" type="text" placeholder="First name">
+						<span class="cd-signin-modal__error">Error message here!</span>
+					</p>
+
+					<p class="cd-signin-modal__fieldset">
+						<label class="cd-signin-modal__label cd-signin-modal__label--email cd-signin-modal__label--image-replace" for="signup-lastname">Last Name</label>
+						<input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signup-lastname" type="text" name="last_name" placeholder="Last name">
+						<span class="cd-signin-modal__error">Error message here!</span>
+					</p>
+
+
+
 					<p class="cd-signin-modal__fieldset">
 						<label class="cd-signin-modal__label cd-signin-modal__label--username cd-signin-modal__label--image-replace" for="signup-username">Username</label>
-						<input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signup-username" type="text" placeholder="Username">
+						<input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signup-username" name="user_name" type="text" placeholder="Username">
 						<span class="cd-signin-modal__error">Error message here!</span>
 					</p>
 
 					<p class="cd-signin-modal__fieldset">
 						<label class="cd-signin-modal__label cd-signin-modal__label--email cd-signin-modal__label--image-replace" for="signup-email">E-mail</label>
-						<input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signup-email" type="email" placeholder="E-mail">
+						<input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signup-email" type="email" name="user_email" placeholder="E-mail">
 						<span class="cd-signin-modal__error">Error message here!</span>
 					</p>
 
+
+
+
+
+
 					<p class="cd-signin-modal__fieldset">
-						<label class="cd-signin-modal__label cd-signin-modal__label--password cd-signin-modal__label--image-replace" for="signup-password">Password</label>
-						<input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signup-password" type="text"  placeholder="Password">
+						<label class="cd-signin-modal__label cd-signin-modal__label--password cd-signin-modal__label--image-replace"  for="signup-password">Password</label>
+						<input class="cd-signin-modal__input cd-signin-modal__input--full-width cd-signin-modal__input--has-padding cd-signin-modal__input--has-border" id="signup-password" type="text" name="user_pass" placeholder="Password">
 						<a href="#0" class="cd-signin-modal__hide-password js-hide-password">Hide</a>
 						<span class="cd-signin-modal__error">Error message here!</span>
 					</p>

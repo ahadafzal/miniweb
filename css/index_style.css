@@ -5,6 +5,28 @@ secondary color #333333
 blue color #6EBBFC
 */
 
+/*  golball */
+
+.row:before,
+.row:after {
+    content:"";
+    display:table;
+}
+.row:after {
+    clear:both;
+}
+
+.col {
+  display: block;
+  float:left;
+  margin: 1% 0 1% 1.6%;
+}
+
+.col:first-child { margin-left: 0; } 
+
+
+
+
 *{
 	margin:0;
 	padding: 0;
@@ -198,90 +220,62 @@ nav p{
 
 /* viggi */
 
-
-.courselink{
-	width:100%;
-	height: 300px;
+.course-section{
+  background-color: #4d323238;
+  height: 550px;
+  width: 100%
 }
 
-.container1 {
-	float: left ;
-	margin-top: 10px;
-	margin-left: 120px;
-    position: relative;
-    width: 20%;
-}
-
-.container{
-	float: left ;
-	margin-top: 10px;
-	position: relative;
-    width: 20%;	
+.col-1-of-4{
+  
+  height: 350px;
+  width: 22%;
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+      margin-left: 32px;
+      box-shadow: 2px -3px 9px 1px #6EBBFC;
+      margin-top: 41px;
 
 }
-.image {
-  opacity: 1;
+
+.col-1-of-4:first-child{
+  margin-left: 30px
+}
+
+.course-data{
+  background-color:rgba(240,240,240,0.9);
+  margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-bottom: 38px;
+    height: 137px;
+}
+
+.course-title{
+  padding-top:10px; 
+  padding-left:10px;
+  padding-right:10px;
+  font-size: 27px;
+  font-family: Calibri;
+}
+
+.learn-more-button{
+  margin-top: 151px;
+    margin-left: 183px;
+    font-size: 16px;
+    border-bottom: 2px solid transparent;
+    margin-right: 22px;
+    color: white;
+    transition: border-bottom 0.8s;
+}
+
+.learn-more-button:hover{
+  border-bottom:2px solid  #6EBBFC;
+}
+
+.course-point:hover{
   display: block;
-  width: 30%;
-  border: 3px solid grey;
-  background-color: rgb(234, 239, 245);
-  height: auto;
-  transition: .5s ease;
-  backface-visibility: hidden;
-}
-
-.middle {
-  transition: .5s ease;
-  opacity: 0;
-  height: 10px;
-  width: 20px;
-  position: absolute;
-  top: 50px;
-  left: 30%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.container:hover .image {
-  opacity: 0.3;
-}
-
-.container1:hover .image{
-	opacity:0.3;
-}
-.container:hover .middle {
-  opacity: 1;
-}
-
-.container1:hover .middle {
-  opacity: 1;
-}
-
-.text {
-  background-color: transparent;
-  border: 1px solid black;
-  display: inline-block;
-    text-transform: uppercase;
-  color: white;
-  font-size: 14px;
- 	text-align: center;
- 	padding-top: 6px;
-  height: 30px;
-  width: 100px;
-
-   
-}
-/* Till here from  .container is the css for hover effect and each symbol is currently having the same css containers */
-.read{
-	    transition: all 0.2s ease;
-
-}
-
-.line{
-	 border: 3px dotted #0099CC;
-        margin-left:10px;
-        margin-right:10px;
 }
 
 
@@ -391,25 +385,6 @@ nav p{
 	margin-top: 30px;
 
 }
-
-.row:before,
-.row:after {
-    content:"";
-    display:table;
-}
-.row:after {
-    clear:both;
-}
-
-.col {
-	display: block;
-	float:left;
-	margin: 1% 0 1% 1.6%;
-}
-
-.col:first-child { margin-left: 0; } 
-
-
 
 .query-attribute{
 	padding-top: 7px;
